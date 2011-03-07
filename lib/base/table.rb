@@ -10,10 +10,10 @@ class Table
 
   def <<(row)
     record = nil
-    if row.is_a?(Record) || row.is_a?(CodeIssue)
+    if row.is_a?(MetricFuRecord) || row.is_a?(CodeIssue)
       record = row
     else
-      record = Record.new(row, @columns)
+      record = MetricFuRecord.new(row, @columns)
     end
     @rows << record
     updated_key_index(record) if @make_index

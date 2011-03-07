@@ -16,7 +16,7 @@ module CarefulArray
 
 end
 
-class CodeIssue < DelegateClass(Record) #DelegateClass(Ruport::Data::Record)
+class CodeIssue < DelegateClass(MetricFuRecord) #DelegateClass(Ruport::Data::Record)
   include Comparable
 
   # TODO: Yuck! 'stat_value' is a column for StatAnalyzer
